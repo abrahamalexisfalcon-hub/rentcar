@@ -17,6 +17,8 @@ strong {
     height: 45px;
     padding-left: 15px;
     font-size: 1.1em;
+    background-color: #fff;
+    color:black
 }
 
 .characteristics{

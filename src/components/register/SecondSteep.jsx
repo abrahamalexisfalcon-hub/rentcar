@@ -1,7 +1,22 @@
+import { useNavigate } from "react-router-dom";
+
 export function RegisterSecondSteep({ handlerBackSteep }) {
+  const navigate = useNavigate();
+
   const handlerBack = () => {
     handlerBackSteep();
   };
+
+
+  const handlerSubmit = (e) => {
+    e.preventDefault();
+    // validata todos los datos y consulta a la api para registrar al usuario
+
+
+    // redireccion al home
+    navigate("/home");
+  }
+
   return (
     <>
       <input
@@ -67,7 +82,7 @@ export function RegisterSecondSteep({ handlerBackSteep }) {
         >
           <span>Volver</span>
         </button>
-        <button className="bg-[#497ACE] text-[#ffffff] font-bold rounded-[10px] w-1/2 h-11.25">
+        <button className="bg-[#497ACE] text-[#ffffff] font-bold rounded-[10px] w-1/2 h-11.25" onClick={handlerSubmit}>
           <span>Regístrate</span>
         </button>
       </div>

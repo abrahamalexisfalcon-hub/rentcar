@@ -1,0 +1,14 @@
+export function HomeCar({ name, price, year, brand, img }) {
+  return (
+    <div className="bg-white rounded-[10px] shadow-lg h-45">
+      <div className="flex justify-center items-center h-23.25">
+        <img src={img} alt={name} className="w-full" />
+      </div>
+      <div className="flex flex-col border-t border-[#B9B9B9] p-2.5 h-26.75">
+        <span className="text-[#B9B9B9] text-[8px]">{brand} - {year}</span>
+        <span className="mt-1.25 mb-2.5 font-bold text-[11px]">{name}</span>
+        <span className="text-[#497ACE] font-bold text-[16px]">S/. {price} <span className="text-[#B9B9B9] font-normal text-[8px]"> x dia</span> </span> 
+      </div>
+    </div>
+  );
+}

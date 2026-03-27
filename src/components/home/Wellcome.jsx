@@ -1,6 +1,6 @@
 import { Characteristics } from '../details/Characteristics'
 
-export function Wellcome() {
+export function HomeWellcome() {
   return (
     <div className="wellcome-card">
       <span><strong>Hola, Jhon Jone 👋</strong></span>
