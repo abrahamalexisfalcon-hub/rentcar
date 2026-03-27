@@ -1,6 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 export function HomeCar({ name, price, year, brand, img }) {
+  const navigate = useNavigate();
+
+  const handleDetailsClick = () => {
+    navigate(`/details`);
+  };
+
   return (
-    <div className="bg-white rounded-[10px] shadow-lg h-45">
+    <div className="bg-white rounded-[10px] shadow-lg h-45" onClick={handleDetailsClick}>
       <div className="flex justify-center items-center h-23.25">
         <img src={img} alt={name} className="w-full" />
       </div>
