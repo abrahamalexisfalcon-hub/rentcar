@@ -11,6 +11,6 @@ npm start
 - React
 - JavaScript
 - CSS
-
+- Tailwind CSS  
 ## 👤 Autor
 Omar3496
