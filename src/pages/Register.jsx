@@ -7,7 +7,7 @@ export function Register() {
   const [steep, setSteep] = useState(1);
   const [isCompleteSteepOne, setIsCompleteSteepOne] = useState(false);
 
-  // ✅ nuevos estados
+  //  nuevos estados
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");

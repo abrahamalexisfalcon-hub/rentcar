@@ -10,6 +10,7 @@ import { SuccessReservation } from "./pages/SuccessReservation";
 import { Inicio } from "./pages/Inicio";
 import { ThankYou } from "./pages/ThankYou";
 import { History } from "./pages/History";
+import { Favorites } from "./pages/Favorites";
 
 function App() {
   return(
@@ -25,6 +26,7 @@ function App() {
       <Route path="/thank-you" element={<ThankYou />} />
       <Route path="/" element={<Inicio />} />
       <Route path="/history" element={<History />} />
+      <Route path="/favorites" element={<Favorites />} />
     </Routes>
   )
 }

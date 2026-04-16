@@ -20,8 +20,8 @@ export function Home() {
     <div className="min-h-screen bg-gradient-to-b from-[#497ACE]/20 via-white to-[#497ACE]/10">
 
       {/* HEADER */}
-      <div className="flex justify-between items-center px-6 py-5 bg-[#3E546D] shadow-md">
-        
+      <div className="flex justify-between items-center px-6 py-3 bg-[#3E546D] shadow-md">
+
         <h1 className="font-bold text-white text-[22px] tracking-wide">
           RentCars
         </h1>
@@ -30,14 +30,20 @@ export function Home() {
 
           <button
             onClick={() => navigate("/history")}
-            className="bg-white text-[#3E546D] w-26 px-5 h-10 rounded-xl font-bold shadow flex items-center justify-center ml-6"
+            className="text-white text-sm hover:underline"
           >
             Historial
+          </button>
+          <button
+            onClick={() => navigate("/favorites")}
+            className="text-white text-sm hover:underline"
+          >
+            Favoritos
           </button>
 
           <button
             onClick={handleLogout}
-            className="bg-red-500 text-white w-26 px-5 h-10 rounded-xl font-bold shadow flex items-center justify-center"
+            className="bg-red-500 px-4 py-1 rounded-lg text-sm font-semibold cursor-pointer"
           >
             Salir
           </button>

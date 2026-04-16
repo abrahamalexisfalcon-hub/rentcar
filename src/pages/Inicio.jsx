@@ -10,7 +10,7 @@ export function Inicio() {
     JSON.parse(localStorage.getItem("user"))
   );
 
-  // 🔥 actualizar estado cuando cambie localStorage
+  // actualizar estado cuando cambie localStorage
   useEffect(() => {
     const handleStorage = () => {
       setUser(JSON.parse(localStorage.getItem("user")));
@@ -23,7 +23,7 @@ export function Inicio() {
 
   const handleLogout = () => {
     localStorage.removeItem("user");
-    setUser(null); // 🔥 fuerza render inmediato
+    setUser(null); // fuerza render inmediato
     navigate("/inicio", { replace: true });
   };
 

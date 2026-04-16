@@ -43,19 +43,19 @@ export function DetailsCar() {
 
         const user = JSON.parse(localStorage.getItem("user"));
 
-        // ❌ si no está logueado
+        // si no está logueado
         if (!user) {
             alert("Para continuar con la reserva necesitas iniciar sesión");
             return;
         }
 
-        // ❌ validar fecha
+        // validar fecha
         if (!date) {
             alert("Selecciona una fecha para continuar");
             return;
         }
 
-        // ✅ 🔥 AGREGADO: guardar historial por usuario
+        // guardar historial por usuario
         const newReservation = {
             car: state,
             days: days,
@@ -70,11 +70,13 @@ export function DetailsCar() {
 
         localStorage.setItem(key, JSON.stringify(history));
 
-        // ✅ navegación (igual que ya tenías)
+        // Navegación 
         navigate("/reservation", {
             state: newReservation
         });
     };
+
+    const today = new Date().toISOString().split("T")[0];
 
     return (
         <div className="flex flex-col">
@@ -120,6 +122,7 @@ export function DetailsCar() {
 
                         <input
                             type="date"
+                            min={today}
                             value={date}
                             onChange={(e) => setDate(e.target.value)}
                             className="w-full border border-[#B9B9B9] text-[#4B5563] rounded-[10px] p-2.5 mt-1.25 mb-7.5 shadow-[5px_7px_5px_rgba(0,0,0,0.28)]"

@@ -85,7 +85,7 @@ export function HomeDetails({ order, search }) { // ✅
         }
     ];
 
-    // ✅ FILTRO (marca + nombre)
+    // FILTRO (marca + nombre)
     const filteredCars = cars.filter((car) => {
         const text = search.toLowerCase();
         return (
@@ -94,7 +94,7 @@ export function HomeDetails({ order, search }) { // ✅
         );
     });
 
-    // ✅ ORDENAR SOBRE FILTRO
+    // ORDENAR SOBRE FILTRO
     const sortedCars = [...filteredCars].sort((a, b) => {
         if (order === "asc") return a.price - b.price;
         if (order === "desc") return b.price - a.price;

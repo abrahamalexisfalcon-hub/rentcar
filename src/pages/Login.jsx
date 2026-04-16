@@ -15,7 +15,7 @@ export function Login() {
       return;
     }
 
-    // ✅ obtener TODOS los usuarios
+    // obtener TODOS los usuarios
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
     if (users.length === 0) {
@@ -23,7 +23,7 @@ export function Login() {
       return;
     }
 
-    // ✅ buscar usuario
+    // buscar usuario
     const userFound = users.find(
       (u) => u.email === email && u.password === password
     );
@@ -33,7 +33,7 @@ export function Login() {
       return;
     }
 
-    // ✅ guardar sesión
+    // guardar sesión
     localStorage.setItem("user", JSON.stringify(userFound));
 
     navigate("/home");

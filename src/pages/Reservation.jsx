@@ -8,7 +8,7 @@ const navigate = useNavigate();
 
 if (!state) return <div className="p-6">No hay datos</div>;
 
-const { car, days, total, date } = state; // 👈 agregado date
+const { car, days, total, date } = state; 
 const returnDate = date
 ? new Date(new Date(date).setDate(new Date(date).getDate() + days))
 : null;
