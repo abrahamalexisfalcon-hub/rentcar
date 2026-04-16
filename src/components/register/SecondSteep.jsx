@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { User, Dock, CalendarDays, Phone } from "lucide-react";
 import { useState } from "react";
 
-export function RegisterSecondSteep({ 
+export function RegisterSecondSteep({
   handlerBackSteep,
   email,
   password,
@@ -36,6 +36,11 @@ export function RegisterSecondSteep({
       !gender
     ) {
       alert("Completa todos los campos");
+      return;
+    }
+
+    if (!isAdult(birthDate)) {
+      alert("Debes ser mayor de edad para registrarte");
       return;
     }
 
@@ -73,6 +78,21 @@ export function RegisterSecondSteep({
     alert("Registro exitoso 🎉");
 
     navigate("/home");
+  };
+
+  const today = new Date().toISOString().split("T")[0];
+  const isAdult = (date) => {
+    const today = new Date();
+    const birth = new Date(date);
+
+    let age = today.getFullYear() - birth.getFullYear();
+    const m = today.getMonth() - birth.getMonth();
+
+    if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+      age--;
+    }
+
+    return age >= 18;
   };
 
   return (
@@ -130,6 +150,7 @@ export function RegisterSecondSteep({
         <CalendarDays className="absolute left-4 top-3.5 text-[#B9B9B9]" size={20} />
         <input
           type="date"
+          max={today}
           value={birthDate}
           onChange={(e) => setBirthDate(e.target.value)}
           className="border border-gray-200 rounded-[10px] pl-12 pr-4 w-full h-12 bg-white shadow"
