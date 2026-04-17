@@ -50,7 +50,7 @@ export function HomeCar({ name, price, year, brand, img }) {
     <div className="relative bg-white rounded-[10px] active:scale-95 shadow-[5px_7px_5px_rgba(0,0,0,0.28)] h-45" onClick={handleDetailsClick}>
       <div
         onClick={handleFavorite}
-        className="absolute top-2 right-2 bg-white p-1 rounded-full shadow cursor-pointer"
+        className="absolute bottom-2 right-2 bg-white p-1 rounded-full shadow cursor-pointer"
       >
         <Heart
           size={18}
