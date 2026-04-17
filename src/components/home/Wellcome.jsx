@@ -31,7 +31,7 @@ export function HomeWellcome({ setOrder, setSearch }) {
 
         <input
           type="text"
-          className="txt-serch mt-3"
+          className="txt-serch mt-1 mb-2"
           placeholder="Buscar vehículo..."
           value={inputValue} // ✅ controlado
           onChange={handleSearch} // ✅

@@ -22,7 +22,7 @@ export function Home() {
       {/* HEADER */}
       <div className="flex justify-between items-center px-6 py-3 bg-[#3E546D] shadow-md">
 
-        <h1 className="font-bold text-white text-[22px] tracking-wide">
+        <h1 className="font-bold text-white text-[19px] tracking-wide">
           RentCars
         </h1>
 
@@ -30,20 +30,20 @@ export function Home() {
 
           <button
             onClick={() => navigate("/history")}
-            className="text-white text-sm hover:underline"
+            className="text-white ml-4 text-sm hover:underline"
           >
             Historial
           </button>
           <button
             onClick={() => navigate("/favorites")}
-            className="text-white text-sm hover:underline"
+            className="text-white ml-2 text-sm hover:underline"
           >
             Favoritos
           </button>
 
           <button
             onClick={handleLogout}
-            className="bg-red-500 px-4 py-1 rounded-lg text-sm font-semibold cursor-pointer"
+            className="bg-red-500 ml-1 px-4 py-1 rounded-lg text-sm font-semibold cursor-pointer"
           >
             Salir
           </button>
