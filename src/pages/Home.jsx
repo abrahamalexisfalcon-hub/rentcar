@@ -20,30 +20,32 @@ export function Home() {
     <div className="min-h-screen bg-gradient-to-b from-[#497ACE]/20 via-white to-[#497ACE]/10">
 
       {/* HEADER */}
-      <div className="flex justify-between items-center px-6 py-3 bg-[#3E546D] shadow-md">
+      <div className="flex justify-between items-center px-6 py-3 bg-[#497ACE] shadow-md">
 
         <h1 className="font-bold text-white text-[19px] tracking-wide">
           RentCars
         </h1>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 bg-[#3E546D] px-4 py-2 rounded-lg ml-2 ">
 
           <button
             onClick={() => navigate("/history")}
-            className="text-white ml-4 text-sm hover:underline"
+            className="text-white text-sm hover:underline"
           >
-            Historial
+            Historial  
           </button>
+          <span className="text-white" >|</span>
           <button
             onClick={() => navigate("/favorites")}
-            className="text-white ml-2 text-sm hover:underline"
+            className="text-white text-sm hover:underline"
           >
             Favoritos
           </button>
+          <span className="text-white">|</span>
 
           <button
             onClick={handleLogout}
-            className="bg-red-500 ml-1 px-4 py-1 rounded-lg text-sm font-semibold cursor-pointer"
+            className="rounded-lg text-sm font-semibold cursor-pointer text-white"
           >
             Salir
           </button>

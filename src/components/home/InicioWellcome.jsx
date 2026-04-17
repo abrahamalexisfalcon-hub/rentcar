@@ -7,7 +7,7 @@ export function InicioWellcome({ setOrder }) {
 
   return (
     <>
-      {/* 🔥 SOLO BUSCADOR (sin saludo) */}
+      {/* BUSCADOR (sin saludo) */}
       <div className="wellcome-card">
         <span className="font-bold">
           Encuentra tu vehículo ideal 🚗

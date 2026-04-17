@@ -20,7 +20,7 @@ export function HomeWellcome({ setOrder, setSearch }) {
   return (
     <>
       {/* WELL COME CARD */}
-      <div className="wellcome-card px-6 py-4 space-y-2">
+      <div className="wellcome-card px-6 py-4 space-y-2 b">
         <span className="text-lg font-semibold text-white ">
           Hola, {user?.name}
         </span>
