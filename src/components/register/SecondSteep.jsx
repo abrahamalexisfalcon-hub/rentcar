@@ -55,10 +55,10 @@ export function RegisterSecondSteep({
       gender
     };
 
-    // ✅ OBTENER USUARIOS EXISTENTES
+    //  OBTENER USUARIOS EXISTENTES
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // 🔥 VALIDAR SI YA EXISTE EL CORREO
+    // VALIDAR SI YA EXISTE EL CORREO
     const exists = users.find((u) => u.email === email);
 
     if (exists) {
@@ -66,13 +66,13 @@ export function RegisterSecondSteep({
       return;
     }
 
-    // ✅ AGREGAR NUEVO USUARIO
+    // AGREGAR NUEVO USUARIO
     users.push(newUser);
 
-    // ✅ GUARDAR LISTA COMPLETA
+    // GUARDAR LISTA COMPLETA
     localStorage.setItem("users", JSON.stringify(users));
 
-    // ✅ INICIAR SESIÓN AUTOMÁTICA
+    // INICIAR SESIÓN AUTOMÁTICA
     localStorage.setItem("user", JSON.stringify(newUser));
 
     alert("Registro exitoso 🎉");
