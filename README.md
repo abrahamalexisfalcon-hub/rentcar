@@ -13,5 +13,4 @@ npm start
 - CSS
 - Tailwind CSS  
 ## 👤 Autor
-Omar3496
 abraham1998f
