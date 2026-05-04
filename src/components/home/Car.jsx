@@ -3,7 +3,7 @@ import { Heart } from "lucide-react";
 import { useState, useEffect } from "react";
 
 
-
+// RECIBE propiedades: name, price, year, brand (marca), img (imagen)
 export function HomeCar({ name, price, year, brand, img }) {
 
   const navigate = useNavigate();
